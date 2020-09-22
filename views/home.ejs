@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      nav {
+        background-color: darkgrey;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+      }
+      nav ul {
+        margin: 0;
+        display: flex;
+        align-items: center;
+      }
+      nav li {
+        list-style: none;
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 0.5rem;
+        background: darkolivegreen;
+        margin: 0 0.5rem;
+      }
+      nav a {
+        text-decoration: none;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <% if(user) {%>
+        <li><a href="/auth/logout">LogOut</a></li>
+        <%} else {%>
+        <li><a href="/auth/login">Login</a></li>
+        <%}%>
+        <li><a href="/">Homepage</a></li>
+
+        <li><a href="/profile">Profile</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Oauth Tutorial</h1>
+    </header>
+    <main>
+      <p>learning oauth Tutorial</p>
+    </main>
+  </body>
+</html>
